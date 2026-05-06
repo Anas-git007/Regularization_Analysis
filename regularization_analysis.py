@@ -4,7 +4,7 @@ High-Dimensional Feature Selection and Regularization Analysis
 Empirical comparison of L1 (Lasso) and L2 (Ridge) regularization in high-dimensional settings.
 Evaluates sparsity, coefficient stability, and predictive performance.
 
-Author: [Your Name]
+Author: [Muhammad Anas]
 """
 
 import numpy as np
@@ -182,7 +182,7 @@ def plot_all_results(X, y, true_coef, alphas, results):
 
     fig = plt.figure(figsize=(20, 16))
     fig.suptitle('High-Dimensional Regularization Analysis:\nL1 (Lasso) vs L2 (Ridge)',
-                 fontsize=18, fontweight='bold', color='black', y=0.98)
+                 fontsize=18, fontweight='bold', color='#e6edf3', y=0.98)
 
     gs = gridspec.GridSpec(3, 3, figure=fig, hspace=0.45, wspace=0.35)
 
@@ -270,7 +270,7 @@ def plot_all_results(X, y, true_coef, alphas, results):
     ax7.grid(True, alpha=0.3, axis='y')
 
     plt.savefig('regularization_analysis.png', dpi=150, bbox_inches='tight',
-                facecolor='white')
+                facecolor='#0d1117')
     print("✓ Saved: regularization_analysis.png")
     plt.close()
 
@@ -327,7 +327,6 @@ def main():
     print_summary(lasso_mse, ridge_mse, lasso_r2, ridge_r2, lasso_nonzero, ridge_nonzero, alphas)
     print("\nDone! Check regularization_analysis.png for the full report.")
     print("PNG saved to:", os.path.abspath("regularization_analysis.png"))
-
 
 if __name__ == "__main__":
     main()
